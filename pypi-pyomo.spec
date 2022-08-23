@@ -4,7 +4,7 @@
 #
 Name     : pypi-pyomo
 Version  : 6.4.2
-Release  : 4
+Release  : 5
 URL      : https://files.pythonhosted.org/packages/57/5c/2a35e0a1c748be041f82669687d47bbb290370862026732bf1416a670772/Pyomo-6.4.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/57/5c/2a35e0a1c748be041f82669687d47bbb290370862026732bf1416a670772/Pyomo-6.4.2.tar.gz
 Summary  : Pyomo: Python Optimization Modeling Objects
