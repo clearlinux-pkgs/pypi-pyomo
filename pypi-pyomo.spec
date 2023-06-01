@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : pypi-pyomo
-Version  : 6.6.0
-Release  : 12
-URL      : https://files.pythonhosted.org/packages/57/33/b61a59ef3c48b5e2878af072b030fa3cf6bc05d07c17d2361b295bd0853a/Pyomo-6.6.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/57/33/b61a59ef3c48b5e2878af072b030fa3cf6bc05d07c17d2361b295bd0853a/Pyomo-6.6.0.tar.gz
+Version  : 6.6.1
+Release  : 13
+URL      : https://files.pythonhosted.org/packages/ef/70/ea738ea23c23399e5e04f184bf78fb181e91284369b4fb3ce74b107edcea/Pyomo-6.6.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/ef/70/ea738ea23c23399e5e04f184bf78fb181e91284369b4fb3ce74b107edcea/Pyomo-6.6.1.tar.gz
 Summary  : Pyomo: Python Optimization Modeling Objects
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -68,10 +68,10 @@ python3 components for the pypi-pyomo package.
 
 
 %prep
-%setup -q -n Pyomo-6.6.0
-cd %{_builddir}/Pyomo-6.6.0
+%setup -q -n Pyomo-6.6.1
+cd %{_builddir}/Pyomo-6.6.1
 pushd ..
-cp -a Pyomo-6.6.0 buildavx2
+cp -a Pyomo-6.6.1 buildavx2
 popd
 
 %build
@@ -79,7 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1685026943
+export SOURCE_DATE_EPOCH=1685637591
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
