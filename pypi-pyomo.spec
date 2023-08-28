@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : pypi-pyomo
-Version  : 6.6.1
-Release  : 13
-URL      : https://files.pythonhosted.org/packages/ef/70/ea738ea23c23399e5e04f184bf78fb181e91284369b4fb3ce74b107edcea/Pyomo-6.6.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/ef/70/ea738ea23c23399e5e04f184bf78fb181e91284369b4fb3ce74b107edcea/Pyomo-6.6.1.tar.gz
+Version  : 6.6.2
+Release  : 14
+URL      : https://files.pythonhosted.org/packages/9b/73/0c11bb78ef7db2bf04424a4a7511c1f0a63777d7120f98a6f1d9e59e9dc7/Pyomo-6.6.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/9b/73/0c11bb78ef7db2bf04424a4a7511c1f0a63777d7120f98a6f1d9e59e9dc7/Pyomo-6.6.2.tar.gz
 Summary  : Pyomo: Python Optimization Modeling Objects
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -22,13 +22,13 @@ BuildRequires : pypi(ply)
 %define debug_package %{nil}
 
 %description
-## Pyomo Overview
-        
-        Pyomo is a Python-based open-source software package that supports a
-        diverse set of optimization capabilities for formulating and analyzing
-        optimization models. Pyomo can be used to define symbolic problems,
-        create concrete problem instances, and solve these instances with
-        standard solvers. Pyomo supports a wide range of problem types,
+[![Github Actions Status](https://github.com/Pyomo/pyomo/workflows/GitHub%20CI/badge.svg?event=push)](https://github.com/Pyomo/pyomo/actions?query=event%3Apush+workflow%3A%22GitHub+CI%22)
+[![Jenkins Status](https://github.com/Pyomo/jenkins-status/blob/main/pyomo_main.svg)](https://pyomo-jenkins.sandia.gov/)
+[![codecov](https://codecov.io/gh/Pyomo/pyomo/branch/main/graph/badge.svg)](https://codecov.io/gh/Pyomo/pyomo)
+[![Documentation Status](https://readthedocs.org/projects/pyomo/badge/?version=latest)](http://pyomo.readthedocs.org/en/latest/)
+[![Build services](https://github.com/Pyomo/jenkins-status/blob/main/pyomo_services.svg)](https://pyomo-jenkins.sandia.gov/)
+[![GitHub contributors](https://img.shields.io/github/contributors/pyomo/pyomo.svg)](https://github.com/pyomo/pyomo/graphs/contributors)
+[![Merged PRs](https://img.shields.io/github/issues-pr-closed-raw/pyomo/pyomo.svg?label=merged+PRs)](https://github.com/pyomo/pyomo/pulls?q=is:pr+is:merged)
 
 %package bin
 Summary: bin components for the pypi-pyomo package.
@@ -68,10 +68,10 @@ python3 components for the pypi-pyomo package.
 
 
 %prep
-%setup -q -n Pyomo-6.6.1
-cd %{_builddir}/Pyomo-6.6.1
+%setup -q -n Pyomo-6.6.2
+cd %{_builddir}/Pyomo-6.6.2
 pushd ..
-cp -a Pyomo-6.6.1 buildavx2
+cp -a Pyomo-6.6.2 buildavx2
 popd
 
 %build
@@ -79,7 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1685637591
+export SOURCE_DATE_EPOCH=1693253455
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -104,7 +104,7 @@ popd
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-pyomo
-cp %{_builddir}/Pyomo-%{version}/LICENSE.md %{buildroot}/usr/share/package-licenses/pypi-pyomo/fb0d4c52dad6bba4d86046bff0f3eb2f58926fd2 || :
+cp %{_builddir}/Pyomo-%{version}/LICENSE.md %{buildroot}/usr/share/package-licenses/pypi-pyomo/c1c4d16ea67d2566b9cd10cb5141738f421c6c83 || :
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -128,7 +128,7 @@ popd
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/pypi-pyomo/fb0d4c52dad6bba4d86046bff0f3eb2f58926fd2
+/usr/share/package-licenses/pypi-pyomo/c1c4d16ea67d2566b9cd10cb5141738f421c6c83
 
 %files python
 %defattr(-,root,root,-)
