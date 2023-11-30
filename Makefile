@@ -1,5 +1,5 @@
 PKG_NAME := pypi-pyomo
-URL = https://files.pythonhosted.org/packages/9b/73/0c11bb78ef7db2bf04424a4a7511c1f0a63777d7120f98a6f1d9e59e9dc7/Pyomo-6.6.2.tar.gz
+URL = https://files.pythonhosted.org/packages/43/46/80bf188f20812381b29d95f3123ced89be68955c821b8d229af0a0439e79/Pyomo-6.7.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
