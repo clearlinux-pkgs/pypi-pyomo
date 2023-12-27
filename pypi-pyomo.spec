@@ -7,7 +7,7 @@
 #
 Name     : pypi-pyomo
 Version  : 6.7.0
-Release  : 17
+Release  : 18
 URL      : https://files.pythonhosted.org/packages/43/46/80bf188f20812381b29d95f3123ced89be68955c821b8d229af0a0439e79/Pyomo-6.7.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/43/46/80bf188f20812381b29d95f3123ced89be68955c821b8d229af0a0439e79/Pyomo-6.7.0.tar.gz
 Summary  : Pyomo: Python Optimization Modeling Objects
