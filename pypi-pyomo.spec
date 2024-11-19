@@ -6,10 +6,10 @@
 # autospec commit: 5424026
 #
 Name     : pypi-pyomo
-Version  : 6.8.1
-Release  : 24
-URL      : https://files.pythonhosted.org/packages/a7/09/a191a9f579bfcadcdcd99db164196e065f682f9ca2381a51f07a03b68639/Pyomo-6.8.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/a7/09/a191a9f579bfcadcdcd99db164196e065f682f9ca2381a51f07a03b68639/Pyomo-6.8.1.tar.gz
+Version  : 6.8.2
+Release  : 25
+URL      : https://files.pythonhosted.org/packages/c8/bf/29450fb25c87e7f37815190805e8f7af57ef259f6721bfed51ee547b5b44/Pyomo-6.8.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/c8/bf/29450fb25c87e7f37815190805e8f7af57ef259f6721bfed51ee547b5b44/Pyomo-6.8.2.tar.gz
 Summary  : Pyomo: Python Optimization Modeling Objects
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -70,10 +70,10 @@ python3 components for the pypi-pyomo package.
 
 
 %prep
-%setup -q -n Pyomo-6.8.1
-cd %{_builddir}/Pyomo-6.8.1
+%setup -q -n Pyomo-6.8.2
+cd %{_builddir}/Pyomo-6.8.2
 pushd ..
-cp -a Pyomo-6.8.1 buildavx2
+cp -a Pyomo-6.8.2 buildavx2
 popd
 
 %build
@@ -81,7 +81,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1731948459
+export SOURCE_DATE_EPOCH=1732029315
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
