@@ -6,10 +6,10 @@
 # autospec commit: fbbd4e3
 #
 Name     : pypi-pyomo
-Version  : 6.9.0
-Release  : 27
-URL      : https://files.pythonhosted.org/packages/b8/7b/901edae90895e4036e06da5eec1dffbae3b7905c4fbd0a7aceff2c3aef24/Pyomo-6.9.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/b8/7b/901edae90895e4036e06da5eec1dffbae3b7905c4fbd0a7aceff2c3aef24/Pyomo-6.9.0.tar.gz
+Version  : 6.9.1
+Release  : 28
+URL      : https://files.pythonhosted.org/packages/ad/99/5c7a7b59a691480dbb3f45107ebc1cc3b07b6cd7eed529caa55cb704f3fe/pyomo-6.9.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/ad/99/5c7a7b59a691480dbb3f45107ebc1cc3b07b6cd7eed529caa55cb704f3fe/pyomo-6.9.1.tar.gz
 Summary  : Pyomo: Python Optimization Modeling Objects
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -70,10 +70,10 @@ python3 components for the pypi-pyomo package.
 
 
 %prep
-%setup -q -n Pyomo-6.9.0
-cd %{_builddir}/Pyomo-6.9.0
+%setup -q -n pyomo-6.9.1
+cd %{_builddir}/pyomo-6.9.1
 pushd ..
-cp -a Pyomo-6.9.0 buildavx2
+cp -a pyomo-6.9.1 buildavx2
 popd
 
 %build
@@ -81,7 +81,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1740162022
+export SOURCE_DATE_EPOCH=1741225583
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -126,7 +126,7 @@ LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-pyomo
-cp %{_builddir}/Pyomo-%{version}/LICENSE.md %{buildroot}/usr/share/package-licenses/pypi-pyomo/e0224283d6c7b499dd3fea48f24dba1409510c73 || :
+cp %{_builddir}/pyomo-%{version}/LICENSE.md %{buildroot}/usr/share/package-licenses/pypi-pyomo/e0224283d6c7b499dd3fea48f24dba1409510c73 || :
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
